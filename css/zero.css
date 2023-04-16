@@ -204,7 +204,7 @@ header ul a:hover {
 
 @media(max-width:767px) {
     header ul li a {
-        font-size: 15px;
+        font-size: 13px;
         width: 100%;
         display: block
     }
@@ -853,7 +853,7 @@ header nav {
 
 @media(max-width:767px) {
     .event-img {
-        width: 380px;
+        width: 350px;
     }
 
     .event-sub {
