@@ -204,7 +204,7 @@ header ul a:hover {
 
 @media(max-width:767px) {
     header ul li a {
-        font-size: 13px;
+        font-size: 12px;
         width: 100%;
         display: block
     }
@@ -803,6 +803,12 @@ header nav {
     padding-left: 10px;
 }
 
+@media (max-width:767px) {
+    .img-steps {
+        width: 300px;
+    }
+}
+
 .img-steps img {
     max-width: 100%;
 }
@@ -853,7 +859,7 @@ header nav {
 
 @media(max-width:767px) {
     .event-img {
-        width: 350px;
+        width: 340px;
     }
 
     .event-sub {
@@ -894,7 +900,7 @@ header nav {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 10px;
+        gap: 7px;
     }
 }
 
