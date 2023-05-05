@@ -1,5 +1,5 @@
 let skills = document.querySelector('.skills')
-let spans = document.querySelectorAll('.skills span')
+let spans = document.querySelectorAll('.the span')
 window.onscroll = function () {
     if (window.scrollY >= skills.offsetTop - 200) {
         spans.forEach((span) => {
