@@ -1,5 +1,6 @@
 let skills = document.querySelector('.skills')
-let spans = document.querySelectorAll('.the span')
+let spans = document.querySelectorAll('.skills span')
+
 window.onscroll = function () {
     if (window.scrollY >= skills.offsetTop - 200) {
         spans.forEach((span) => {
@@ -10,7 +11,16 @@ window.onscroll = function () {
             span.style.width = 0;
         })
     }
-}
+    if (window.scrollY >= secs.offsetTop) {
+        if (!started) {
+            nums.forEach((number) => startcount(number))
+        }
+        started = true;
+    }
+};
+// spans.forEach((span) => {
+//     span.style.width = span.dataset.width
+// })
 
 let countdat = new Date("Dec 31, 2023 12:59:59").getTime()
 let counter = setInterval(() => {
@@ -27,16 +37,8 @@ let counter = setInterval(() => {
 }, 1000)
 
 let nums = document.querySelectorAll('.stats .number')
-let secSkills = document.querySelector('.skills')
+let secs = document.querySelector('.stats')
 let started = false
-window.onscroll = function () {
-    if (window.scrollY >= secSkills.offsetTop) {
-        if (!started) {
-            nums.forEach((number) => startcount(number))
-        }
-        started = true;
-    }
-}
 
 function startcount(el) {
     let goal = el.dataset.goal;
