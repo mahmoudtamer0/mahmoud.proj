@@ -25,3 +25,25 @@ let counter = setInterval(() => {
     document.getElementById('minutes').innerHTML = minutes < 10 ? `0${minutes}` : minutes;
     document.getElementById('seconds').innerHTML = seconds < 10 ? `0${seconds}` : seconds;
 }, 1000)
+
+let nums = document.querySelectorAll('.stats .number')
+let secSkills = document.querySelector('.skills')
+let started = false
+window.onscroll = function () {
+    if (window.scrollY >= secSkills.offsetTop) {
+        if (!started) {
+            nums.forEach((number) => startcount(number))
+        }
+        started = true;
+    }
+}
+
+function startcount(el) {
+    let goal = el.dataset.goal;
+    let count = setInterval(() => {
+        el.textContent++;
+        if (el.textContent == goal) {
+            clearInterval(count)
+        }
+    }, 200 / goal)
+}

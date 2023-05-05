@@ -733,10 +733,13 @@ header nav {
 }
 
 /*  */
-.skill h4 {
+.theskill {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.skill h4 {
     font-size: 22px;
 }
 
@@ -750,7 +753,7 @@ header nav {
     padding-bottom: 30px;
 }
 
-.skill h4 span {
+.skill span.percc {
     font-size: 15px;
     padding: 2px;
     border-radius: 5px;
