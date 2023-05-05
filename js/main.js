@@ -11,3 +11,17 @@ window.onscroll = function () {
         })
     }
 }
+
+let countdat = new Date("Dec 31, 2023 12:59:59").getTime()
+let counter = setInterval(() => {
+    let dateNow = new Date().getTime();
+    let dateDiff = countdat - dateNow;
+    let days = Math.floor(dateDiff / (1000 * 60 * 60 * 24));
+    let hours = Math.floor(dateDiff % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))
+    let minutes = Math.floor(dateDiff % (1000 * 60 * 60) / (1000 * 60));
+    let seconds = Math.floor(dateDiff % (1000 * 60) / 1000);
+    document.getElementById('days').innerHTML = days < 10 ? `0${days}` : days;
+    document.getElementById('hours').innerHTML = hours < 10 ? `0${hours}` : hours;
+    document.getElementById('minutes').innerHTML = minutes < 10 ? `0${minutes}` : minutes;
+    document.getElementById('seconds').innerHTML = seconds < 10 ? `0${seconds}` : seconds;
+}, 1000)

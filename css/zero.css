@@ -917,7 +917,7 @@ header nav {
     align-items: center;
     border: 1px solid rgb(201 197 197);
     border-radius: 5px;
-    padding: 0 10px;
+    padding: 10px 10px;
     transition: 0.3s;
 }
 
