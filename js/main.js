@@ -1,21 +1,31 @@
 let skills = document.querySelector('.skills')
 let spans = document.querySelectorAll('.skills span')
+let artic_btn = document.getElementById('artic_btn')
+let gallery_btn = document.getElementById('gallery_btn')
+let feat_btn = document.getElementById('feat_btn')
+let skills_btn = document.getElementById('skills_btn')
+let arrow_btn = document.querySelector('.arrow-btn i')
 
 window.onscroll = function () {
-    if (window.scrollY >= skills.offsetTop - 200) {
+    if (window.scrollY >= skills.offsetTop - 500) {
         spans.forEach((span) => {
             span.style.width = span.dataset.width
         })
-    } else if (window.scrollY > 11570.400390625) {
-        spans.forEach((span) => {
-            span.style.width = 0;
-        })
+        // } else if (window.scrollY > 11570.400390625) {
+        //     spans.forEach((span) => {
+        //         span.style.width = 0;
+        //     })
     }
     if (window.scrollY >= secs.offsetTop) {
         if (!started) {
             nums.forEach((number) => startcount(number))
         }
         started = true;
+    }
+    if (scrollY > 400) {
+        arrow_btn.style.display = ('block')
+    } else {
+        arrow_btn.style.display = ('none')
     }
 };
 let countdat = new Date("Dec 31, 2023 12:59:59").getTime()
@@ -45,17 +55,7 @@ function startcount(el) {
         }
     }, 200 / goal)
 }
-let artic_btn = document.getElementById('artic_btn')
-let gallery_btn = document.getElementById('gallery_btn')
-let feat_btn = document.getElementById('feat_btn')
-let skills_btn = document.getElementById('skills_btn')
-let articles = document.querySelector('.articles')
-let gallery = document.querySelector('.gallery')
-let features = document.querySelector('.features')
-let testi = document.querySelector('.testi')
-let team = document.querySelector('.team')
-let works = document.querySelector('.works')
-let arrow_btn = document.querySelector('.arrow-btn i')
+
 arrow_btn.style.display = ('none');
 arrow_btn.onclick = function () {
     scroll({
@@ -63,10 +63,10 @@ arrow_btn.onclick = function () {
     })
 }
 
-window.onscroll = function () {
-    if (scrollY > 400) {
-        arrow_btn.style.display = ('block')
-    } else {
-        arrow_btn.style.display = ('none')
-    }
-}
+// window.onscroll = function () {
+//     if (scrollY > 400) {
+//         arrow_btn.style.display = ('block')
+//     } else {
+//         arrow_btn.style.display = ('none')
+//     }
+// }
