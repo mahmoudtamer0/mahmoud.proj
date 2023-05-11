@@ -55,50 +55,18 @@ let features = document.querySelector('.features')
 let testi = document.querySelector('.testi')
 let team = document.querySelector('.team')
 let works = document.querySelector('.works')
+let arrow_btn = document.querySelector('.arrow-btn i')
+arrow_btn.style.display = ('none');
+arrow_btn.onclick = function () {
+    scroll({
+        top: 0,
+    })
+}
 
-// window.onscroll = function () {
-// if (window.scrollY >= skills.offsetTop - 80 && window.scrollY < (team.offsetTop - 100)) {
-//     spans.forEach((span) => {
-//         span.style.width = span.dataset.width
-//     })
-// }
-// } else if (window.scrollY > 7110.39990234375) {
-//     spans.forEach((span) => {
-//         span.style.width = 0;
-//     })
-// if (window.scrollY >= secs.offsetTop) {
-//     if (!started) {
-//         nums.forEach((number) => startcount(number))
-//     }
-//     started = true;
-// }
-
-
-// if (window.scrollY >= articles.offsetTop) {
-//     artic_btn.classList.add('activ')
-
-//     // } else if (window.scrollY >= (features.offsetTop - 80) && window.scrollY < (testi.offsetTop - 100)) {
-//     //     feat_btn.classList.add('activ')
-//     // } else if (window.scrollY >= (gallery.offsetTop - 80) && window.scrollY < features.offsetTop - 80) {
-//     //     gallery_btn.classList.add('activ')
-// } else if (window.scrollY >= gallery.offsetTop - 80) {
-//     gallery_btn.classList.add('activ')
-//     artic_btn.classList.add('activ')
-// }
-// else if (window.scrollY >= features.offsetTop - 80) {
-//     gallery_btn.classList.remove('activ')
-//     artic_btn.classList.remove('activ')
-// }
-// //  else if (window.scrollY >= (skills.offsetTop - 80) && window.scrollY < (works.offsetTop - 100)) {
-// //     skills_btn.classList.add('activ')
-
-// else {
-//     artic_btn.classList.remove('activ')
-//     feat_btn.classList.remove('activ')
-//     gallery_btn.classList.remove('activ')
-//     skills_btn.classList.remove('activ')
-//     // spans.forEach((span) => {
-//     //     span.style.width = 0;
-//     // })
-// }
-// }
+window.onscroll = function () {
+    if (scrollY > 400) {
+        arrow_btn.style.display = ('block')
+    } else {
+        arrow_btn.style.display = ('none')
+    }
+}

@@ -127,6 +127,19 @@ a {
 }
 
 /* end global rules */
+.arrow-btn i {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    color: white;
+    background-color: var(--main-color);
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 1000;
+    cursor: pointer;
+}
+
 /* header */
 header {
     position: fixed;
